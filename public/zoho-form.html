@@ -1,15 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>AidSwap Zoho Webform</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aid Swap Contact</title>
 </head>
-<body style="margin:0; background:#fff;">
-  <!-- ↓↓↓ YOUR ORIGINAL ZOHO SNIPPET STARTS HERE ↓↓↓ -->
-  <!-- paste everything you sent me, unchanged -->
-  <!-- Note: keep the <script> tags; leave it all intact -->
-  <!-- … -->
-  <!-- ↑↑↑ YOUR ORIGINAL ZOHO SNIPPET ENDS HERE ↑↑↑ -->
+<body style="background-color:white; color:black; display:flex; justify-content:center; padding:20px;">
+  <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='max-width:600px; width:100%;'>
+
+    <style>
+      .wf_customMessageBox {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #132C14;
+        background: #F5FAF5;
+        box-shadow: 0 2px 6px 0 rgba(0,0,0,0.25);
+        max-width: 90%;
+        width: max-content;
+        word-break: break-word;
+        z-index: 11000;
+        border-radius: 6px;
+        border: 1px solid #A9D3AB;
+        min-width: 100px;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      .zcwf_lblLeft .zcwf_row { margin: 15px 0; }
+      .zcwf_lblLeft .zcwf_col_lab { width: 30%; float: left; }
+      .zcwf_lblLeft .zcwf_col_fld { width: 68%; float: left; }
+      .zcwf_lblLeft input[type=text], .zcwf_lblLeft textarea {
+        width: 60%; border: 1px solid #c0c6cc !important; border-radius: 2px;
+      }
+      @media all and (max-width: 600px){
+        .zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld {
+          width: auto; float: none !important;
+        }
+      }
+    </style>
+
+    <div class='zcwf_title' style='font-family:Arial; font-weight:bold;'>Aid Swap Contact</div>
+
+    <form id='webform6912073000000776492'
+      name='WebForm6912073000000776492'
+      method='POST'
+      action='https://crm.zoho.com/crm/WebForm'
+      accept-charset='UTF-8'
+      onsubmit="return checkMandatory6912073000000776492();">
+
+      <!-- Required hidden fields -->
+      <input type='hidden' name='xnQsjsdp' value='2cdea10ca87e0789bf5a06e446bf4ebd1c3927f57a466f4d664be7f98929d8c5'/>
+      <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
+      <input type='hidden' name='xmIwtLD' value='f50c464d5b886efef7a086e679dbb984537538d42d37978b82ec3929a17029aae8d9878a7c735f5a0456fdc7dc465c87'/>
+      <input type='hidden' name='actionType' value='Q3VzdG9tTW9kdWxlMg=='/>
+      <input type='hidden' name='returnURL' value='null'/>
+
+      <!-- Name -->
+      <div class='zcwf_row'>
+        <div class='zcwf_col_lab'><label for='NAME'>Full Name<span style='color:red;'>*</span></label></div>
+        <div class='zcwf_col_fld'><input type='text' id='NAME' name='NAME' maxlength='120'/></div>
+      </div>
+
+      <!-- Email -->
+      <div class='zcwf_row'>
+        <div class='zcwf_col_lab'><label for='Email'>Email<span style='color:red;'>*</span></label></div>
+        <div class='zcwf_col_fld'><input type='text' ftype='email' id='Email' name='Email' maxlength='100'/></div>
+      </div>
+
+      <!-- City -->
+      <div class='zcwf_row'>
+        <div class='zcwf_col_lab'><label for='COBJ2CF3'>City</label></div>
+        <div class='zcwf_col_fld'><input type='text' id='COBJ2CF3' name='COBJ2CF3' maxlength='255'/></div>
+      </div>
+
+      <!-- State -->
+      <div class='zcwf_row'>
+        <div class='zcwf_col_lab'><label for='COBJ2CF4'>State/Province<span style='color:red;'>*</span></label></div>
+        <div class='zcwf_col_fld'><input type='text' id='COBJ2CF4' name='COBJ2CF4' maxlength='255'/></div>
+      </div>
+
+      <!-- Country -->
+      <div class='zcwf_row'>
+        <div class='zcwf_col_lab'><label for='COBJ2CF5'>Country<span style='color:red;'>*</span></label></div>
+        <div class='zcwf_col_fld'><input type='text' id='COBJ2CF5' name='COBJ2CF5' maxlength='255'/></div>
+      </div>
+
+      <!-- Skills -->
+      <div class='zcwf_row'>
+        <div class='zcwf_col_lab'><label for='COBJ2CF6'>Skills &amp; Goods you would like to offer</label></div>
+        <div class='zcwf_col_fld'><textarea id='COBJ2CF6' name='COBJ2CF6'></textarea></div>
+      </div>
+
+      <div class='zcwf_row'>
+        <div class='zcwf_col_lab'></div>
+        <div class='zcwf_col_fld'>
+          <input type='submit' class='zcwf_button' value='Submit'/>
+          <input type='reset' class='zcwf_button' value='Reset'/>
+        </div>
+      </div>
+    </form>
+
+    <script>
+      function validateEmail6912073000000776492 (){
+        var form = document.forms['WebForm6912073000000776492'];
+        var emailFld = form.querySelectorAll('[ftype=email]');
+        for(var i=0; i<emailFld.length; i++){
+          var emailVal = emailFld[i].value.trim();
+          if(emailVal.length){
+            var atpos = emailVal.indexOf('@');
+            var dotpos = emailVal.lastIndexOf('.');
+            if(atpos<1 || dotpos<atpos+2 || dotpos+2 >= emailVal.length){
+              alert('Please enter a valid email address.');
+              emailFld[i].focus();
+              return false;
+            }
+          }
+        }
+        return true;
+      }
+      function checkMandatory6912073000000776492 (){
+        var mndFileds = ['NAME', 'Email', 'COBJ2CF4', 'COBJ2CF5'];
+        var fldLangVal = ['Full Name', 'Email', 'State/Province', 'Country'];
+        for(var i=0; i<mndFileds.length; i++){
+          var fieldObj = document.forms['WebForm6912073000000776492'][mndFileds[i]];
+          if(fieldObj){
+            if(fieldObj.value.trim().length == 0 ){
+              alert(fldLangVal[i] + ' cannot be empty.');
+              fieldObj.focus();
+              return false;
+            }
+          }
+        }
+        if(!validateEmail6912073000000776492()){ return false; }
+        return true;
+      }
+    </script>
+
+    <!-- Zoho WebForm Analytics -->
+    <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=cefb3e7d52aa7ecef2ba779ed9ae04685193eebf9cd1e815bd4441133115763fda37dfabfc0a1300d403f86910b1ff90gidd44631e3f4e8b363f19b62fa178f45173ebfe8624060da82ce17af270d760ddcgid2a42f2a567e0751d38f67f5a7bfb44f3e50413da9e0419e1f6a14df60148059fgid2feb5ee7f517c2b96ab0005d2259d70ccf5300ff1c6cf2cc90791806993c06e2&tw=7ed5abc9335738f4276301ca20d5e4fdefc336ba99f323c7558384d0e7cd9272'></script>
+
+  </div>
 </body>
 </html>
