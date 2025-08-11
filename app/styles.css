@@ -1,0 +1,25 @@
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full-page centering */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* Change if you want a background color */
+}
+
+/* Content styling */
+.page-content {
+  max-width: 800px;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  padding: 20px;
+}
